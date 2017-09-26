@@ -10,23 +10,26 @@
 	
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 			<script type="text/javascript">
-			
+				//North
 				function btnNorth() {
 					alert("You are at security, they say they saw your dog but can't say where he is for sure since its a circular building..."); 
 					document.getElementById("maintext").value = "Now what?"; }
-				
-					function btnSouth() {
-						alert("You leave the building. Try again.");
-						document.getElementById("maintext").value="Get back inside and find your dog!";
-					}
-						function btnEast() {
-							alert ("You head down to the chemistry lab and hear barking");
-							document.getElementById("maintext").value="You almost got him!";
+				//South
+				function btnSouth() {
+					alert("You leave the building. Try again.");
+					document.getElementById("maintext").value="Get back inside and find your dog!";
+						}
+				//East		
+				function btnEast() {
+					alert ("You head down to the chemistry lab and hear barking");
+					document.getElementById("maintext").value="You almost got him!";
 							}
-								function btnWest() {
-									alert ("Donnelly! You found your dog, sitting by the fashion lab.");
-									document.getElementById("maintext").value="Congrats!";
-								}
+				//West			
+				function btnWest() {
+					alert ("Donnelly! You found your dog, sitting by the fashion lab.");
+					document.getElementById("maintext").value="Congrats!";
+							}
+								
       </script>
       <style>
          .footer {color: purple; font-weight: bold;}
