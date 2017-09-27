@@ -15,7 +15,6 @@
         function btnNorth() {
             alert("You are at security, they say they saw your dog but can't say where he is for sure since its a circular building...");
             document.getElementById("maintext").value = "Now what?";
-			if (score < 20) targetTextArea.value = 5;
         }
         //South
         function btnSouth() {
@@ -32,6 +31,13 @@
             alert("Donnelly! You found your dog, sitting by the fashion lab.");
             document.getElementById("maintext").value = "Congrats!";
         }
+		
+		//Score
+		var score
+		function scorecounter() {
+				score += 5;
+        document.getElementById("scorebox");
+		}
 
     </script>
     <style>
@@ -51,16 +57,16 @@
     </h2>
     <textarea rows="5" cols="44" id="maintext" name="maintext"> You enter Donnelly Hall in a panic realizing your dog, Donnelly, has gotten loose and made his way to his favorite building. You must find him!
       </textarea>
-    <textarea rows="2" cols="10" id="score" name="score"> Score </textarea>
+    <textarea rows="2" cols="10" id="scorebox" name="scorebox"> Score </textarea>
     <br />
 
-    <input type="button" id="btnNorth" name="btnNorth" value="North" onclick="btnNorth ();" />
+    <input type="button" id="btnNorth" name="btnNorth" value="North" onclick="btnNorth (); scorecounter ();" />
 
-    <input type="button" id="btnSouth" name="btnSouth" value="South" onclick="btnSouth();" />
+    <input type="button" id="btnSouth" name="btnSouth" value="South" onclick="btnSouth(); scorecounter ();" />
 
-    <input type="button" id="btnEast" name="btnEast" value="East" onclick="btnEast();" />
+    <input type="button" id="btnEast" name="btnEast" value="East" onclick="btnEast(); scorecounter ();" />
 
-    <input type="button" id="btnWest" name="btnWest" value="West" onclick="btnWest();" />
+    <input type="button" id="btnWest" name="btnWest" value="West" onclick="btnWest(); scorecounter();" />
 
     <p class="footer">
         Questions sent to <a href="mailto:krout.ian@gmail.com"> Ian Krout </a>
