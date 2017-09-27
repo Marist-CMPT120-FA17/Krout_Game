@@ -11,17 +11,11 @@
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <script type="text/javascript">
-        var score = 0;
- 
-        var btnNorth = false;
-        var btnSouth = false;
-        var btnEast = false;
-        var btnWest = false;
-
-        //North
+		//North
         function btnNorth() {
             alert("You are at security, they say they saw your dog but can't say where he is for sure since its a circular building...");
             document.getElementById("maintext").value = "Now what?";
+			if (score < 20) targetTextArea.value = 5;
         }
         //South
         function btnSouth() {
@@ -38,6 +32,7 @@
             alert("Donnelly! You found your dog, sitting by the fashion lab.");
             document.getElementById("maintext").value = "Congrats!";
         }
+
     </script>
     <style>
         .footer {
@@ -59,7 +54,7 @@
     <textarea rows="2" cols="10" id="score" name="score"> Score </textarea>
     <br />
 
-    <input type="button" id="btnNorth" name="btnNorth" value="North" onclick="btnNorth();" />
+    <input type="button" id="btnNorth" name="btnNorth" value="North" onclick="btnNorth ();" />
 
     <input type="button" id="btnSouth" name="btnSouth" value="South" onclick="btnSouth();" />
 
