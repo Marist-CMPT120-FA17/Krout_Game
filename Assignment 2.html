@@ -11,7 +11,7 @@
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <script type="text/javascript">
-        //Score
+        //Score and location visits
         var score = 0;
         var locNorth = false;
         var locSouth = false;
@@ -22,6 +22,7 @@
         function btnNorth() {
             alert("You are at security, they say they saw your dog but can't say where he is for sure since its a circular building...");
             document.getElementById("maintext").value = "Now what?";
+			//If statement for visiting once
             if (locNorth == false) {
 
                 score += 5;
@@ -35,6 +36,7 @@
         function btnSouth() {
             alert("You leave the building. Try again.");
             document.getElementById("maintext").value = "Get back inside and find your dog!";
+			//If statement for visiting once
             if (locSouth == false) {
 
                 score += 5;
@@ -48,6 +50,7 @@
         function btnEast() {
             alert("You head down to the chemistry lab and hear barking");
             document.getElementById("maintext").value = "You almost got him!";
+			//If statement for visiting once
             if (locEast == false) {
 
                 score += 5;
@@ -61,6 +64,7 @@
         function btnWest() {
             alert("Donnelly! You found your dog, sitting by the fashion lab.");
             document.getElementById("maintext").value = "Congrats!";
+			//If statement for visiting once
             if (locWest == false) {
 
                 score += 5;
