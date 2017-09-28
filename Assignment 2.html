@@ -11,70 +11,65 @@
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <script type="text/javascript">
-	//Score
-		var score = 0;
-		var locNorth = false;
-		var locSouth = false;
-		var locEast = false;
-		var locWest = false;
-		
-		//North
+        //Score
+        var score = 0;
+        var locNorth = false;
+        var locSouth = false;
+        var locEast = false;
+        var locWest = false;
+
+        //North
         function btnNorth() {
             alert("You are at security, they say they saw your dog but can't say where he is for sure since its a circular building...");
-            document.getElementById("maintext").value = "Now what?"; 
-			if ( locNorth == false) {
-				
-				score += 5;
-				document.getElementById("scorebox").value = "Score:"+ score;
-				locNorth = true;
-				}
-			else {
-				document.getElementById("scorebox").value = "Score:"+ score; 
-					}
-		}
+            document.getElementById("maintext").value = "Now what?";
+            if (locNorth == false) {
+
+                score += 5;
+                document.getElementById("scorebox").value = "Score:" + score;
+                locNorth = true;
+            } else {
+                document.getElementById("scorebox").value = "Score:" + score;
+            }
+        }
         //South
         function btnSouth() {
             alert("You leave the building. Try again.");
             document.getElementById("maintext").value = "Get back inside and find your dog!";
-			if ( locSouth == false) {
-				
-				score += 5;
-				document.getElementById("scorebox").value = "Score:"+ score;
-				locSouth = true;
-				}
-			else {
-				document.getElementById("scorebox").value = "Score:"+ score; 
-					}
+            if (locSouth == false) {
+
+                score += 5;
+                document.getElementById("scorebox").value = "Score:" + score;
+                locSouth = true;
+            } else {
+                document.getElementById("scorebox").value = "Score:" + score;
+            }
         }
         //East		
         function btnEast() {
             alert("You head down to the chemistry lab and hear barking");
             document.getElementById("maintext").value = "You almost got him!";
-			if ( locEast == false) {
-				
-				score += 5;
-				document.getElementById("scorebox").value = "Score:"+ score;
-				locEast = true;
-				}
-			else {
-				document.getElementById("scorebox").value = "Score:"+ score; 
-					}
+            if (locEast == false) {
+
+                score += 5;
+                document.getElementById("scorebox").value = "Score:" + score;
+                locEast = true;
+            } else {
+                document.getElementById("scorebox").value = "Score:" + score;
+            }
         }
         //West			
         function btnWest() {
             alert("Donnelly! You found your dog, sitting by the fashion lab.");
             document.getElementById("maintext").value = "Congrats!";
-			if ( locWest == false) {
-				
-				score += 5;
-				document.getElementById("scorebox").value = "Score:"+ score;
-				locWest = true;
-				}
-			else {
-				document.getElementById("scorebox").value = "Score:"+ score; 
-					}
-        }
+            if (locWest == false) {
 
+                score += 5;
+                document.getElementById("scorebox").value = "Score:" + score;
+                locWest = true;
+            } else {
+                document.getElementById("scorebox").value = "Score:" + score;
+            }
+        }
     </script>
     <style>
         .footer {
