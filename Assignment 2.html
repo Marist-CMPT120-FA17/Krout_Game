@@ -11,33 +11,69 @@
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <script type="text/javascript">
+	//Score
+		var score = 0;
+		var locNorth = false;
+		var locSouth = false;
+		var locEast = false;
+		var locWest = false;
+		
 		//North
         function btnNorth() {
             alert("You are at security, they say they saw your dog but can't say where he is for sure since its a circular building...");
-            document.getElementById("maintext").value = "Now what?";
-        }
+            document.getElementById("maintext").value = "Now what?"; 
+			if ( locNorth == false) {
+				
+				score += 5;
+				document.getElementById("scorebox").value = "Score:"+ score;
+				locNorth = true;
+				}
+			else {
+				document.getElementById("scorebox").value = "Score:"+ score; 
+					}
+		}
         //South
         function btnSouth() {
             alert("You leave the building. Try again.");
             document.getElementById("maintext").value = "Get back inside and find your dog!";
+			if ( locSouth == false) {
+				
+				score += 5;
+				document.getElementById("scorebox").value = "Score:"+ score;
+				locSouth = true;
+				}
+			else {
+				document.getElementById("scorebox").value = "Score:"+ score; 
+					}
         }
         //East		
         function btnEast() {
             alert("You head down to the chemistry lab and hear barking");
             document.getElementById("maintext").value = "You almost got him!";
+			if ( locEast == false) {
+				
+				score += 5;
+				document.getElementById("scorebox").value = "Score:"+ score;
+				locEast = true;
+				}
+			else {
+				document.getElementById("scorebox").value = "Score:"+ score; 
+					}
         }
         //West			
         function btnWest() {
             alert("Donnelly! You found your dog, sitting by the fashion lab.");
             document.getElementById("maintext").value = "Congrats!";
-        }
-		
-		//Score
-		var score
-		function scorecounter() {
+			if ( locWest == false) {
+				
 				score += 5;
-        document.getElementById("scorebox");
-		}
+				document.getElementById("scorebox").value = "Score:"+ score;
+				locWest = true;
+				}
+			else {
+				document.getElementById("scorebox").value = "Score:"+ score; 
+					}
+        }
 
     </script>
     <style>
@@ -60,13 +96,13 @@
     <textarea rows="2" cols="10" id="scorebox" name="scorebox"> Score </textarea>
     <br />
 
-    <input type="button" id="btnNorth" name="btnNorth" value="North" onclick="btnNorth (); scorecounter ();" />
+    <input type="button" id="btnNorth" name="btnNorth" value="North" onclick="btnNorth();" />
 
-    <input type="button" id="btnSouth" name="btnSouth" value="South" onclick="btnSouth(); scorecounter ();" />
+    <input type="button" id="btnSouth" name="btnSouth" value="South" onclick="btnSouth();" />
 
-    <input type="button" id="btnEast" name="btnEast" value="East" onclick="btnEast(); scorecounter ();" />
+    <input type="button" id="btnEast" name="btnEast" value="East" onclick="btnEast();" />
 
-    <input type="button" id="btnWest" name="btnWest" value="West" onclick="btnWest(); scorecounter();" />
+    <input type="button" id="btnWest" name="btnWest" value="West" onclick="btnWest();" />
 
     <p class="footer">
         Questions sent to <a href="mailto:krout.ian@gmail.com"> Ian Krout </a>
